@@ -7,8 +7,27 @@ crossorigin="anonymous"></script>
 <html>
 	<script>
 		$(document).ready(function() {
-		$("#pic5").addClass("animated shake");
-	});</script>
+		   $("#pic5").addClass("animated shake");
+	        });
+		<!-- 從這裡 -->
+	        window.onload=function(){
+                   var text = document.getElementById('text');
+                   var btn = document.getElementById('btn');
+                   var box = document.getElementById('box');
+                   var name = document.getElementById('name');
+                   var count = 1;
+
+                   btn.onclick=function(){
+                      var val = text.value;
+                      var name1 = name.value;
+                      var newText = '<p>' + name1 + ' : ' + val + '</p>';
+                      count = count + 1;
+                   
+	              box.innerHTML = newText + box.innerHTML;
+                    }
+                }
+	        <!-- 到這裡 -->
+	</script>
 	<head>
 		<title>Harry Potter Sorting Hat</title>
 		<meta charset="utf-8" />
@@ -16,6 +35,42 @@ crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+	<!-- 從這裡 -->
+	<style>
+           #box {
+              width: 200px;
+              height: 200px;
+              border: 1px solid #f00;
+           }
+           #wrapper {
+              margin: 0 auto;
+              padding-bottom: 25px;
+              background: #eee;
+              width: 600px;
+              max-width: 100%;
+              border: 2px solid #212121;
+              border-radius: 4px;
+           }
+           #wrapper div {
+              text-align: left;
+              margin: 0 auto;
+              margin-bottom: 5px;
+              padding: 10px;
+              background: #fff;
+              border: 190px solid #eee;
+              overflow: auto;
+              border-radius: 4px;
+              border-top: 4px solid #eee;
+              border-bottom: 4px solid #eee;
+           }
+           #wrapper h1 {
+              margin-left: 230px;
+              border-top: 4px solid #eee;
+              border-bottom: 4px solid #eee;
+           }
+        </style>
+	<!-- 到這裡 -->
+	
 	<body class="is-preload">
 
 		<!-- Wrapper -->
@@ -190,6 +245,21 @@ crossorigin="anonymous"></script>
 					</div>
 			<footer>
 				<!--留言板寫在這 -->
+				<!-- 從這裡開始放的 -->
+				<div id="wrapper">
+                                   <h1>留言區</h1>
+                                   <label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;暱稱:</label>
+                                   <input type="text" id="name" value="" style="width: 170px;" />
+                                   <br/>
+
+                                   <label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;留言:</label>
+                                   <input type="text" id="text" value="" style="margin-right: 180px; width: 170px;" />
+                                   <input type="button" id="btn" value="提交" style="margin-left: 190px; margin-right: 190px; width: 220px; background-color: #ff9800" />
+                                   <br/>
+                                   <br>
+                                   <div id="box"></div>
+                                </div>
+				<!-- 到這裡 -->
 			</footer>
 			</div>
 		
