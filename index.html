@@ -17,7 +17,7 @@ crossorigin="anonymous"></script>
                    btn.onclick=function(){
                       var val = text.value;
                       var name1 = name.value;
-                      var newText = '<p>' + name1 + ' : ' + val + '</p>';
+                      var newText = name1 + ' : ' + val + '<br>';
                       count = count + 1;
                    
 	              box.innerHTML = newText + box.innerHTML;
@@ -42,22 +42,24 @@ crossorigin="anonymous"></script>
               height: 200px;
               border: 1px solid #f00;
            }
-           <!-- #wrapper2 {
+           #wrapper2 {
               margin: 0 auto;
-              padding-bottom: 25px;
+              padding-top: 5px;
+              padding-bottom: 20px;
               background: ##000;
               width: 600px;
               max-width: 100%;
               border: 2px solid #212121;
               border-radius: 4px;
-           } -->
+           }
            #wrapper2 div {
+	      color : black;
               text-align: left;
               margin: 0 auto;
               margin-bottom: 5px;
               padding: 10px;
               background: #fff;
-              border: 40px solid #eee;
+              border: 20px solid #eee;
               overflow: auto;
               border-radius: 4px;
               border-top: 4px solid #eee;
@@ -243,20 +245,19 @@ crossorigin="anonymous"></script>
 							</article>
 
 					</div>
-			<footer>
+			<footer id="footer">
 				<!--留言板寫在這 -->
 				<!-- 從這裡開始放的 -->
 				<div id="wrapper2">
                                    <h1>Chat Room</h1>
-                                   <label>&emsp;&emsp;&ensp;Nickname:</label>
-                                   <input type="text" id="name" value="" style="width: 170px;" />
-                                   <br/>
+                                   <label>Nickname:</label>
+                                   <input type="text" id="name" value="" style="margin-left: 200px; margin-right: 180px; width: 185px;" />
+                                   
 
                                    <label>&emsp;Comment:</label>
-                                   <input type="text" id="text" value="" style="width: 170px;" />
-                                   <input type="button" id="btn" value="Submit" style="margin-left: 190px; margin-right: 190px; width: 220px; background-color: #ff9800" />
-                                   <br/>
-                                   <br>
+                                   <input type="text" id="text" value="" style="margin-left: 200px; margin-right: 180px; width: 185px;" />
+                                   <input type="button" id="btn" value="Submit" style="margin-left: 200px; margin-right: 200px;height: 40px; width: 120px; background-color: #ff9800" />
+                                   
                                    <div id="box"></div>
                                 </div>
 				<!-- 到這裡 -->
