@@ -6,9 +6,6 @@ crossorigin="anonymous"></script>
 
 <html>
 	<script>
-		$(document).ready(function() {
-		   $("#pic5").addClass("animated shake");
-	        });
 		<!-- 從這裡 -->
 	        window.onload=function(){
                    var text = document.getElementById('text');
@@ -27,6 +24,9 @@ crossorigin="anonymous"></script>
                     }
                 }
 	        <!-- 到這裡 -->
+		$(document).ready(function() {
+		   $("#pic5").addClass("animated shake");
+	        });
 	</script>
 	<head>
 		<title>Harry Potter Sorting Hat</title>
@@ -36,7 +36,7 @@ crossorigin="anonymous"></script>
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<!-- 從這裡 -->
-		<style>
+	<style>
            #box {
               width: 500px;
               height: 200px;
