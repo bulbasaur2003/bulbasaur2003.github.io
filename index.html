@@ -13,37 +13,37 @@ crossorigin="anonymous"></script>
 	        window.onload=function(){
                    var text = document.getElementById('text');
                    var btn = document.getElementById('btn');
-                   var box = document.getElementById('box');
+                   var box1 = document.getElementById('box1');
                    var name = document.getElementById('name');
                    var count = 1;
-		   var house = "(Stupid Muggle)";
-		   var about = 0;
-		   box1.innerHTML = '<span style="color: red; font: initial;">' + "Harry Potter (Gryffindor): Roger! Professor Snape, we will mind our language!" + '</span>' + '<br/>' + box1.innerHTML;
-                   box1.innerHTML = '<span style="color: green; font: initial;">' + "Professor Severus Snape (Slytherin): Freedom of speech is all very well but we must observe the limits of common propriety." + '</span>' + '<br/>' + box1.innerHTML;	
+                   var house = "(Stupid Muggle)";
+                   var about = 0;
+                   box1.innerHTML = '<span style="color: red; font: initial;">' + "Harry Potter (Gryffindor): Roger! Professor Snape, we will mind our language!" + '</span>' + '<br/>' + box1.innerHTML;
+                   box1.innerHTML = '<span style="color: green; font: initial;">' + "Professor Severus Snape (Slytherin): Freedom of speech is all very well but we must observe the limits of common propriety ." + '</span>' + '<br/>' + box1.innerHTML;
+
                    btn1.onclick=function(){
                    	house = "(Gryffindor)";
-			about = 1;
+                   	about = 1;
                    }
                    btn2.onclick=function(){
                    	house = "(Hufflepuff)";
-			about = 2;
+                   	about = 2;
                    }
                    btn3.onclick=function(){
                    	house = "(Ravenclaw)";
                    	about = 3;
-		   }
+                   }
                    btn4.onclick=function(){
                    	house = "(Slytherin)";
                    	about = 4;
-		   }
-			
+                   }
                    btn.onclick=function(){
-                      var val = text.value;
-                      var name1 = name.value;
-                      var newText;
+                     var val = text.value;
+                     var name1 = name.value;
+                     var newText;
                      switch(about){
                      case 0:
-                     	newText = '<span style="color: black; font: initial;">' + name1 + ' ' + house + ' : ' + val + '</span>' + '<br/>';
+                     	newText = '<span style=" font: initial;">' + name1 + ' ' + house + ' : ' + val + '</span>' + '<br/>';
                      	break;
                      case 1:
                      	newText = '<span style="color: red; font: initial;">' + name1 + ' ' + house + ' : ' + val + '</span>' + '<br/>';
@@ -52,17 +52,17 @@ crossorigin="anonymous"></script>
                      	newText = '<span style="color: gold; font: initial;">' + name1 + ' ' + house + ' : ' + val + '</span>' + '<br/>';
                      	break;
                      case 3:
-                     	newText = '<span style="color: blue; font: initial;">' + name1 + ' ' + house + ' : ' + val + '</span>' + '<br/>';
+                     	newText = '<span style="color: cornflowerblue; font: initial;">' + name1 + ' ' + house + ' : ' + val + '</span>' + '<br/>';
                      	break;
                      case 4:
                      	newText = '<span style="color: green; font: initial;">' + name1 + ' ' + house + ' : ' + val + '</span>' + '<br/>';
                      	break;
                      }
-                      count = count + 1;
-                   
-	              box.innerHTML = newText + box.innerHTML;
-                    }
-                }
+                    
+                     count = count + 1;                   	
+	              		box1.innerHTML = newText + box1.innerHTML;
+	               }
+               }
 	        <!-- 到這裡 -->
 	</script>
 	<head>
@@ -74,10 +74,10 @@ crossorigin="anonymous"></script>
 	</head>
 	<!-- 從這裡 -->
 	<style>
-           #box {
+           #box1 {
               width: 500px;
               height: 200px;
-              border: 1px solid #f00;
+              border: 1px solid #ffffff00;
            }
            #wrapper2 {
               margin: 0 auto;
@@ -89,8 +89,8 @@ crossorigin="anonymous"></script>
               border: 2px solid #212121;
               border-radius: 4px;
            }
-           #wrapper2 div {
-	      color : black;
+           #wrapper2 div{
+           		color : black;
               text-align: left;
               margin: 0 auto;
               margin-bottom: 5px;
@@ -282,20 +282,21 @@ crossorigin="anonymous"></script>
 							</article>
 
 					</div>
+
 			<footer id="footer">
 				<!--留言板寫在這 -->
 				<!-- 從這裡開始放的 -->
 				<div id="wrapper2">
-                                   <h1>Chat Room</h1>
+                                   <h1>Chat Room</h1>                                   
+
                                    <label>Nickname:</label>
                                    <input type="text" id="name" value="" style="margin-left: 200px; margin-right: 180px; width: 185px;" />
-                                   
 
-                                   <label>&emsp;Comment:</label>
-                                   <input type="text" id="text" value="" style="margin-left: 200px; margin-right: 180px; width: 185px;" />
+                                   	<label>Comment:</label>
+                                   	<input type="text" id="text" value="" style="margin-left: 200px; margin-right: 180px; width: 185px;" />
+
                                    <input type="button" id="btn" value="Send" style="margin-left: 200px; margin-right: 200px;height: 40px; width: 120px; background-color: #ff9800" />
-                                   
-                                   <div id="box"></div>
+                                   <div id="box1"></div>
                                 </div>
 				<!-- 到這裡 -->
 			</footer>
