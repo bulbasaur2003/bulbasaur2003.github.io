@@ -6,6 +6,9 @@ crossorigin="anonymous"></script>
 
 <html>
 	<script>
+		$(document).ready(function() {
+		   $("#pic5").addClass("animated shake");
+	        });
 		<!-- 從這裡 -->
 	        window.onload=function(){
                    var text = document.getElementById('text');
@@ -22,24 +25,25 @@ crossorigin="anonymous"></script>
 			about = 1;
                    }
                    btn2.onclick=function(){
-                   	house = "(Hufflepuff)"
+                   	house = "(Hufflepuff)";
 			about = 2;
                    }
                    btn3.onclick=function(){
-                   	house = "(Ravenclaw)"
+                   	house = "(Ravenclaw)";
                    	about = 3;
 		   }
                    btn4.onclick=function(){
-                   	house = "(Slytherin)"
+                   	house = "(Slytherin)";
                    	about = 4;
 		   }
+			
                    btn.onclick=function(){
                       var val = text.value;
                       var name1 = name.value;
                       var newText;
                      switch(about){
                      case 0:
-                     	newText = '<span>' + name1 + ' ' + house + ' : ' + val + '</span>' + '<br/>';
+                     	newText = '<span style="color: black; font: initial;">' + name1 + ' ' + house + ' : ' + val + '</span>' + '<br/>';
                      	break;
                      case 1:
                      	newText = '<span style="color: red; font: initial;">' + name1 + ' ' + house + ' : ' + val + '</span>' + '<br/>';
@@ -60,9 +64,6 @@ crossorigin="anonymous"></script>
                     }
                 }
 	        <!-- 到這裡 -->
-		$(document).ready(function() {
-		   $("#pic5").addClass("animated shake");
-	        });
 	</script>
 	<head>
 		<title>Harry Potter Sorting Hat</title>
