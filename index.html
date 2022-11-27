@@ -13,11 +13,23 @@ crossorigin="anonymous"></script>
                    var box = document.getElementById('box');
                    var name = document.getElementById('name');
                    var count = 1;
-
+		   var house = "(Unsorted)";
+                   btn1.onclick=function(){
+                   	house = "(Gryffindor)"
+                   }
+                   btn2.onclick=function(){
+                   	house = "(Hufflepuff)"
+                   }
+                   btn3.onclick=function(){
+                   	house = "(Ravenclaw)"
+                   }
+                   btn4.onclick=function(){
+                   	house = "(Slytherin)"
+                   }
                    btn.onclick=function(){
                       var val = text.value;
                       var name1 = name.value;
-                      var newText = name1 + ' : ' + val + '<br>';
+                      var newText = name1 + ' ' + house + ' : ' + val + '<br>';
                       count = count + 1;
                    
 	              box.innerHTML = newText + box.innerHTML;
@@ -229,17 +241,17 @@ crossorigin="anonymous"></script>
 								<h3>With the following elements, which one you think is the most important?</h3>
 								<ul>
 									<li>
-										<a href="#Gryffindor"><button>A. BRAVERY</button></a>
+										<a href="#Gryffindor"><input type="button" id="btn1" value="A. BRAVERY"></a>
 									</li>
 									<li>
-										<a href="#Hufflepuff"><button>B. JUSTICE</button></a>
+										<a href="#Hufflepuff"><input type="button" id="btn2" value="B. JUSTICE"></a>
 									</li>
 									<li>
-										<a href="#Ravenclaw"><button>C. WISDOM</button></a>
+										<a href="#Ravenclaw"><input type="button" id="btn3" value="C. WISDOM"></a>
 										
 									</li>
 									<li>
-										<a href="#Slytherin"><button>D. AMBITION</button></a>
+										<a href="#Slytherin"><input type="button" id="btn4" value="D. AMBITION"></a>
 									</li>
 								</ul>
 							</article>
