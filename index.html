@@ -14,22 +14,44 @@ crossorigin="anonymous"></script>
                    var name = document.getElementById('name');
                    var count = 1;
 		   var house = "(Unsorted)";
+		   var about = 0;
                    btn1.onclick=function(){
-                   	house = "(Gryffindor)"
+                   	house = "(Gryffindor)";
+			about = 1;
                    }
                    btn2.onclick=function(){
                    	house = "(Hufflepuff)"
+			about = 2;
                    }
                    btn3.onclick=function(){
                    	house = "(Ravenclaw)"
-                   }
+                   	about = 3;
+		   }
                    btn4.onclick=function(){
                    	house = "(Slytherin)"
-                   }
+                   	about = 4;
+		   }
                    btn.onclick=function(){
                       var val = text.value;
                       var name1 = name.value;
-                      var newText = name1 + ' ' + house + ' : ' + val + '<br>';
+                      var newText;
+                     switch(about){
+                     case 0:
+                     	newText = '<span>' + name1 + ' ' + house + ' : ' + val + '</span>' + '<br/>';
+                     	break;
+                     case 1:
+                     	newText = '<span style="color: red; font: initial;">' + name1 + ' ' + house + ' : ' + val + '</span>' + '<br/>';
+                     	break;
+                     case 2:
+                     	newText = '<span style="color: yellow; font: initial;">' + name1 + ' ' + house + ' : ' + val + '</span>' + '<br/>';
+                     	break;
+                     case 3:
+                     	newText = '<span style="color: blue; font: initial;">' + name1 + ' ' + house + ' : ' + val + '</span>' + '<br/>';
+                     	break;
+                     case 4:
+                     	newText = '<span style="color: green; font: initial;">' + name1 + ' ' + house + ' : ' + val + '</span>' + '<br/>';
+                     	break;
+                     }
                       count = count + 1;
                    
 	              box.innerHTML = newText + box.innerHTML;
