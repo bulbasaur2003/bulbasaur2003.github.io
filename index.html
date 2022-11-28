@@ -74,6 +74,32 @@ crossorigin="anonymous"></script>
 	</head>
 	<!-- 從這裡 -->
 	<style>
+	#gs {
+		width: 30px;
+		height: 20px;
+		position: absolute;
+		animation-name: fly_potter;
+		animation-duration: 16s;
+  		animation-delay: -1.5s;
+  		animation-iteration-count: infinite;
+	}
+	#potter {
+		width: 100px;
+		height: 60px;
+		position: absolute;
+		animation-name: fly_potter;
+  		animation-duration: 16s;
+  		animation-iteration-count: infinite;
+	}
+	@keyframes fly_potter {
+  		0%   {transform: rotate(45deg);left:1150px; top:300px;}
+  		12.5%{transform: rotate(-45deg);left:900px; top:0px;}
+  		37.5%{transform: rotate(45deg);left:300px; top:600px;}
+  		50%  {transform: rotate(135deg);left: 0px; top:300px;}
+  		62.5%{transform: rotate(270deg);left: 300px; top:0px}
+  		87.5%{transform: rotate(135deg);left: 900px; top:600px;}
+  		100% {transform: rotate(0deg);left:1150px; top:300px;}
+	}
 	   #pic5 {
 		position: relative;
 		animation: floating 2.3s ease-in-out infinite, spinning 3.0s ease-in-out infinite;
@@ -150,6 +176,8 @@ crossorigin="anonymous"></script>
 					</header>
 
 				<!-- Main -->
+				<img id="potter" src="images/potter.png">
+				<img id="gs" src="images/golden snitch.png">
 					<div id="main">
 
 						<!-- Gryffindor -->
