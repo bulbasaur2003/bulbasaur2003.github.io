@@ -74,6 +74,22 @@ crossorigin="anonymous"></script>
 	</head>
 	<!-- 從這裡 -->
 	<style>
+	   <!-- 分類帽漂浮 -->
+	   #pic5{
+		position: relative;
+		animation: floating 2.3s ease-in-out infinite, spinning 3.0s ease-in-out infinite;
+	   }
+	   @keyframes floating {
+	  	0% {margin-top: 0; margin-bottom: 20px;}
+		50% {margin-top: 5px; margin-bottom: 0px;}
+		100% {margin-top: 0; margin-bottom: 20px;}
+	   }
+	   @keyframes spinning {
+  		0% {transform: rotate(-7deg);}
+		50% {transform: rotate(7deg);}
+		100% {transform: rotate(-7deg);}
+	   }		
+	   <!-- 分類帽漂浮end -->
            #box1 {
               width: 500px;
               height: 200px;
