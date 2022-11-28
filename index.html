@@ -37,6 +37,9 @@ crossorigin="anonymous"></script>
                    btn.onclick=function(){
                      var val = text.value;
                      var name1 = name.value;
+		     if(name1 == ""){
+                     	name1 = "Anonymous";
+                     }
                      var newText;
                      switch(about){
                      case 0:
