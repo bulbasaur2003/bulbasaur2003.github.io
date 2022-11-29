@@ -14,8 +14,8 @@ crossorigin="anonymous"></script>
                    var count = 1;
                    var house = "(Stupid Muggle)";
                    var about = 0;
-                   box1.innerHTML = '<span style="color: red; font: initial;">' + "Harry Potter (Gryffindor): Roger! Professor Snape, we will mind our language!" + '</span>' + '<br/>' + box1.innerHTML;
-                   box1.innerHTML = '<span style="color: green; font: initial;">' + "Professor Severus Snape (Slytherin): Freedom of speech is all very well but we must observe the limits of common propriety ." + '</span>' + '<br/>' + box1.innerHTML;
+                   box1.innerHTML = '<span style="color: red; font-family: monospace;">' + "Harry Potter (Gryffindor): Roger! Professor Snape, we will mind our language!" + '</span>' + '<br/>' + box1.innerHTML;
+                   box1.innerHTML = '<span style="color: green; font-family: monospace;">' + "Professor Severus Snape (Slytherin): Freedom of speech is all very well but we must observe the limits of common propriety ." + '</span>' + '<br/>' + box1.innerHTML;
 
                    btn1.onclick=function(){
                    	house = "(Gryffindor)";
@@ -42,19 +42,19 @@ crossorigin="anonymous"></script>
                      var newText;
                      switch(about){
                      case 0:
-                     	newText = '<span style="color:black; font: initial;">' + name1 + ' ' + house + ' : ' + val + '</span>' + '<br/>';
+                     	newText = '<span style="color:black; font-family: monospace;">' + name1 + ' ' + house + ' : ' + val + '</span>' + '<br/>';
                      	break;
                      case 1:
-                     	newText = '<span style="color: red; font: initial;">' + name1 + ' ' + house + ' : ' + val + '</span>' + '<br/>';
+                     	newText = '<span style="color: red; font-family: monospace;">' + name1 + ' ' + house + ' : ' + val + '</span>' + '<br/>';
                      	break;
                      case 2:
-                     	newText = '<span style="color: gold; font: initial;">' + name1 + ' ' + house + ' : ' + val + '</span>' + '<br/>';
+                     	newText = '<span style="color: gold; font-family: monospace;">' + name1 + ' ' + house + ' : ' + val + '</span>' + '<br/>';
                      	break;
                      case 3:
-                     	newText = '<span style="color: cornflowerblue; font: initial;">' + name1 + ' ' + house + ' : ' + val + '</span>' + '<br/>';
+                     	newText = '<span style="color: cornflowerblue; font-family: monospace;">' + name1 + ' ' + house + ' : ' + val + '</span>' + '<br/>';
                      	break;
                      case 4:
-                     	newText = '<span style="color: green; font: initial;">' + name1 + ' ' + house + ' : ' + val + '</span>' + '<br/>';
+                     	newText = '<span style="color: green; font-family: monospace;">' + name1 + ' ' + house + ' : ' + val + '</span>' + '<br/>';
                      	break;
                      }
                     
@@ -132,6 +132,7 @@ crossorigin="anonymous"></script>
            }
            #wrapper2 div{
               width: 90%;
+	      height: 300px;
               text-align: left;
               margin: 0 auto;
               margin-bottom: 5px;
